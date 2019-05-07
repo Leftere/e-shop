@@ -5,8 +5,8 @@ import Slide from "./Slide/Slide";
 import slide1Desktop from "../../assets/slider-imgs/desktop/spring-collection-2019-desktop.jpg";
 import slide2Desktop from "../../assets/slider-imgs/desktop/short-sleeves-2019-desktop.jpg";
 
-import slide1DesktopMob from "../../assets/slider-imgs/desktop/spring-collection-2019-desktop.jpg";
-import slide2DesktopMob from "../../assets/slider-imgs/desktop/short-sleeves-2019-desktop.jpg";
+import slide1Mob from "../../assets/slider-imgs/mobile/spring-collection-2019-mobile.jpg";
+import slide2Mob from "../../assets/slider-imgs/mobile/short-sleeves-2019-mobile.jpg";
 
 import "./Slider.css";
 
@@ -24,11 +24,11 @@ export default class SimpleSlider extends React.Component {
     slides: [
       {
         url: slide1Desktop,
-        mobileUrl: slide1DesktopMob
+        mobileUrl: slide1Mob
       },
       {
         url: slide2Desktop,
-        mobileUrl: slide2DesktopMob
+        mobileUrl: slide2Mob
       }
     ]
   };
