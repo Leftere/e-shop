@@ -40,8 +40,8 @@ export default class SimpleSlider extends React.Component {
           const slideImg =
             window.innerWidth > 767 ? slide.url : slide.mobileUrl;
           return (
-            <div>
-              <Slide key={i} slide={slideImg} />
+            <div key={i}>
+              <Slide slide={slideImg} />
             </div>
           );
         })}
