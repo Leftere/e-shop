@@ -6,46 +6,69 @@ import slider2 from '../../assets/slider-imgs/desktop/short-sleeves-2019-desktop
 import './Slider.css';
 
 
-export default class SimpleSlider extends React.Component {
+
+const slider = (props) => {
+
+  
+  var settings = {
+            dots: true,
+            infinite: true,
+            speed: 500,
+            autoplay: true,
+            slidesToShow: 1,
+            slidesToScroll: 1
+          };
+          
+  return(
+    <Slider {...settings}>
+      <div>
+        <img src={slider1Desktop} />
+      </div>
+      <div>
+        <img src={slider2} />
+      </div>
+    </Slider>
+  );
+}
+
+export default slider;
+
+// export default class SimpleSlider extends React.Component {
     
-    constructor(props) {
-        super(props);
-        this.state = {
-            src: slider1Desktop
-        }
-    };
+//     constructor(props) {
+//         super(props);
+//         this.state = {
+//             src: slider1Desktop
+//         }
+//     };
+
+//     render() {
+//       var settings = {
+//         dots: true,
+//         infinite: true,
+//         speed: 500,
+//         autoplay: true,
+//         slidesToShow: 1,
+//         slidesToScroll: 1
+//       };
 
 
 
-
-    
-    render() {
-      var settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        autoplay: true,
-        slidesToShow: 1,
-        slidesToScroll: 1
-      };
-
-
-
-      return (
-        <Slider {...settings}>
-          <div>
-              <img src={this.state.src}/>
-          </div>
-          <div>
-          <img src={slider2}/>
-          </div>
+//       return (
+//         <Slider {...settings}>
+//           <div>
+//               <img src={slider1Desktop}/>
+//           </div>
+//           <div>
+//           <img src={slider2}/>
+//           </div>
           
         
         
         
-        </Slider>
-      );
-    }
-  }
+//         </Slider>
+//       );
+//     }
+//   }
 
   

@@ -3,7 +3,8 @@
     color: #666;
     background: #fff;
     font-weight: 400;
-    margin: 0 50px;
+    margin: 0 auto;
+    max-width: 1180px;
     height: 40px;
     justify-content: center;
     padding: 0 50px;

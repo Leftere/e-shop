@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './components/Header/Header'
 import Promo from './components/Promo/Promo'
-import SimpleSlider from './components/Slider/Slider';
+import Slider from './components/Slider/Slider';
 import './Layout/Layout.css';
 
 
@@ -11,7 +11,7 @@ function App() {
     <Promo />
     <Header /> 
     <main>
-      <SimpleSlider />
+      <Slider />
       <div>catergories</div>
       <div>Slider</div>
       <div>Video</div>
