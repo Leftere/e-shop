@@ -1,11 +1,8 @@
-import React from 'react';
+import React from "react";
 
-const Slide = (props) => {
-    console.log(props);
-    return (
-        <img src={props.slide} />
-    )
-        
-}
+const Slide = props => {
+  console.log(props.slide);
+  return <img alt="" src={props.slide} />;
+};
 
 export default Slide;
