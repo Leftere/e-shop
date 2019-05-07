@@ -26,10 +26,10 @@ export default class SimpleSlider extends React.Component {
       return (
         <Slider {...settings}>
           <div>
-          <Slide slide={this.state.slides[0]}/>
+          <Slide slide={this.state.slides[0].slide}/>
           </div>
           <div>
-          <Slide slide={this.state.slides[1]}/>
+          <Slide slide={this.state.slides[1].slide}/>
           </div>
         </Slider>
       );
