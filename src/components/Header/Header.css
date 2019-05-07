@@ -33,6 +33,10 @@
     margin: 5px 10px;
 }
 
+.Header  ul li a:hover {
+    color: #66A6A5;
+}
+
 .Header  ul li i {
     margin: 0 10px;
 }
