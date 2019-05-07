@@ -1,0 +1,45 @@
+.Header {
+    display: flex;
+    color: #666;
+    background: #fff;
+    font-weight: 400;
+    margin: 0 50px;
+    height: 40px;
+    justify-content: center;
+    padding: 0 50px;
+    text-transform: uppercase;
+    border-bottom: solid 0.5px #f2f2f2;
+}
+
+
+.Header  ul  {
+    list-style-type: none;
+    display: flex;
+    width: 100%;
+    
+    align-items: center;
+    
+}
+
+.Header ul  > #card {
+    margin-left: auto;
+}
+
+
+.Header  ul li a {
+    text-decoration: none;
+    color: #666;
+    margin: 5px 10px;
+}
+
+.Header  ul li i {
+    margin: 0 10px;
+}
+
+@media only screen and (max-width : 890px)  {
+    .Header ul {
+        display: none;
+    }
+
+    
+    }

@@ -1,0 +1,19 @@
+
+@import "../../node_modules/slick-carousel/slick/slick.css";
+@import "../../node_modules/slick-carousel/slick/slick-theme.css";
+
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #F9F9FA;
+}
+
+
+main {
+    padding: 0 50px;
+    margin: 0 50px;
+    background: #fff;
+}
+
+

@@ -1,0 +1,20 @@
+.Shop:hover {
+cursor: pointer;
+}
+
+.Shop  a {
+    color: #000;
+    text-decoration: none;
+    margin-right: 5px;
+    font-weight: bold;
+
+}
+
+.Shop i {
+    font-weight: bold;
+}
+
+
+
+
+
