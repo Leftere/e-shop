@@ -5,7 +5,7 @@ import './Header.css'
 import '../../assets/logo/logo.css'
 
 
-
+//eslint-disable-next-line
 class Header extends Component {
     render () {
         return (
@@ -14,6 +14,7 @@ class Header extends Component {
                 
                 <ul>
                     <li>  <Shop /></li>
+                    
                     <li><a href="#">Gift Cards</a></li>
                     <li><a href="#">Our Fit</a></li>
                     <li><a href="#">Ask Us</a></li>
