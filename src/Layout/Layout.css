@@ -17,4 +17,10 @@ main {
     background: #fff;
 }
 
+@media only screen and (max-width : 460px) {
+    main {
+        margin: 0 15px;
+    }
+}
+
 

@@ -19,33 +19,57 @@ const settings = {
   slidesToScroll: 1
 };
 
-export default class SimpleSlider extends React.Component {
-  state = {
-    slides: [
-      {
-        url: slide1Desktop,
-        mobileUrl: slide1Mob
-      },
-      {
-        url: slide2Desktop,
-        mobileUrl: slide2Mob
-      }
-    ]
-  };
+class SimpleSlider extends React.Component {
+    constructor(props) {
+      super(props);
+      let viewport = window.innerWidth > 600 ? "desktop" : "mobile";
+      this.state = {
+        viewport,
+        slides: [
+          {
+            url: slide1Desktop,
+            mobileUrl: slide1Mob
+          },
+          {
+            url: slide2Desktop,
+            mobileUrl: slide2Mob
+          }
+        ]
+      };
+    }
+
+
+  componentDidMount() {
+    window.addEventListener('resize', this.isMobile)
+  }
+  componentWillMount() {
+    window.removeEventListener('resize', this.isMobile)
+  }
+
+  isMobile = () => {
+    if(window.innerWidth < 600 && this.state.viewport === "desktop") {
+      this.setState({viewport: "mobile"});
+    } else if (window.innerWidth > 600 && this.state.viewport === "mobile") {
+      this.setState({viewport: "desktop"})
+    }
+  }
 
   render() {
     return (
       <Slider {...settings}>
         {this.state.slides.map((slide, i) => {
           const slideImg =
-            window.innerWidth > 767 ? slide.url : slide.mobileUrl;
+          this.state.viewport === "desktop" ? slide.url : slide.mobileUrl;
           return (
             <div key={i} >
               <Slide slide={slideImg} />
-            </div>
+            </div>   
           );
         })}
       </Slider>
     );
   }
 }
+
+
+export default SimpleSlider;

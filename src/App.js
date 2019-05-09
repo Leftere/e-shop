@@ -12,7 +12,7 @@ function App() {
     <Header /> 
     <main>
       <Slider />
-      <div>catergories</div>
+      <div>catergories....</div>
       <div>Slider</div>
       <div>Video</div>
       <div>Join Us</div>

@@ -15,10 +15,10 @@ class Header extends Component {
                 <ul>
                     <li>  <Shop /></li>
                     
-                    <li><a href="#">Gift Cards</a></li>
-                    <li><a href="#">Our Fit</a></li>
-                    <li><a href="#">Ask Us</a></li>
-                    <li  id="card"><a href="#"><i className="fa fa-shopping-cart"></i>Card (0) Items</a></li>
+                    <li><a href="https://github.com">Gift Cards</a></li>
+                    <li><a href="https://github.com">Our Fit</a></li>
+                    <li><a href="https://github.com">Ask Us</a></li>
+                    <li  id="card"><a href="https://github.com"><i className="fa fa-shopping-cart"></i>Card (0) Items</a></li>
                 
                     
                 </ul>

@@ -5,7 +5,7 @@ class Promo extends Component {
     render() {
         return (
             <div className="Promo">
-                <a href="#">free shipping, exchanges, and returns on us orderes. shipping, duties and taxes paid for international order</a>
+                <a href="https://github.com">free shipping, exchanges, and returns on us orderes. shipping, duties and taxes paid for international order</a>
             </div>
         )
     }

@@ -48,3 +48,9 @@
 
     
     }
+
+  @media only screen and (max-width : 460px) {
+      .Header {
+          margin: 0 15px;
+      }
+  }
