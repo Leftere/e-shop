@@ -17,6 +17,10 @@ main {
     background: #fff;
 }
 
+ul li {
+    list-style-type: none;
+}
+
 @media only screen and (max-width : 460px) {
     main {
         margin: 0 15px;
