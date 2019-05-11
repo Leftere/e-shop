@@ -1,0 +1,14 @@
+.Video {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 50px;
+        /* padding-top:25%; */
+}
+
+iFrame {
+    position: absolute;
+    top:10px;
+    left:0;
+    width: 100%;
+    height: 100%;
+}

@@ -2,7 +2,10 @@ import React from 'react';
 import Header from './components/Header/Header'
 import Promo from './components/Promo/Promo'
 import Slider from './components/Slider/Slider';
-import Categories from './components/Categories/Categories';
+import Video from './components/Video/Video';
+import JoinUs from './components/JoinUs/JoinUs';
+import Footer from './components/Footer/Footer';
+
 
 import './Layout/Layout.css';
 
@@ -14,9 +17,9 @@ function App() {
     <Header /> 
     <main>
     <Slider />  
-      <div>Video</div>
-      <div>Join Us</div>
-      <footer>Footer</footer>
+      <Video />
+      <JoinUs />
+      <Footer />
     </main>
     </div>
   );

@@ -1,0 +1,48 @@
+.JoinUs {
+    padding: 4em 10em;
+    background: #f4f4f4;
+    text-align: center;
+    font-weight: 700;
+    font-size: 18px;
+    font-family: Roboto, sans-serif;
+    line-height: 1.4
+    ;
+}
+
+Form {
+    display: flex;
+}
+
+label {
+    width: 100%;
+}
+
+label input {
+    width: 100%;
+    border-radius: 0 3px 3px 0;
+    font-size: 16px;
+    padding: 8px 10px;
+    border: 1px solid #cecece;
+    ;
+
+}
+
+.btn {
+    background: #66A6A5;
+    color: #fff;
+    padding: 8px 10px;
+    text-transform: capitalize;
+    font-size: 16px;
+    cursor: pointer;
+    
+}
+
+.btn:hover {
+    background:#787878
+}
+
+@media only screen and (max-width : 900px)  {
+    .JoinUs {
+        padding: 4em 1em;
+    }
+}
