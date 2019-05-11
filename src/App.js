@@ -13,9 +13,7 @@ function App() {
     <Promo />
     <Header /> 
     <main>
-      <Slider />
-      
-      <div>Slider</div>
+    <Slider />  
       <div>Video</div>
       <div>Join Us</div>
       <footer>Footer</footer>

@@ -7,7 +7,6 @@ import images from './images';
 
 import "./Slider.css";
 
-console.log(images);
 const settings = {
   dots: true,
   infinite: true,
@@ -17,7 +16,7 @@ const settings = {
   slidesToScroll: 1
 };
 
-const bottomSliderSetting = {
+const bottomSliderSettings = {
   dots: true,
   infinite: true,
   speed: 500,
@@ -31,21 +30,7 @@ class SimpleSlider extends React.Component {
       super(props);
       let viewport = window.innerWidth > 600 ? "desktop" : "mobile";
       this.state = {
-        viewport,
-        // slides: [
-        //   {
-        //     url: imgaes,
-        //     mobileUrl: slide1Mob,
-        //     shirtsDesktopUrl: shirts1Desktop,
-        //     shirtsMobileUrl: shirts1Mobile
-        //   },
-        //   {
-        //     url: slide2Desktop,
-        //     mobileUrl: slide2Mob,
-        //     shirtsDesktopUrl: shirts2Desktop,
-        //     shirtsMobileUrl: shirts2Mobile
-        //   }
-        // ]
+        viewport
       };
     }
 
@@ -65,49 +50,31 @@ class SimpleSlider extends React.Component {
     }
   }
 
-  createSlider(images, config) {
+  createSlider(images, config) { 
     return (
+      
       <Slider {...config}>
-      {images.map()}
+      {images.map((slide, i) => {
+        const slideImg = 
+        this.state.viewport === "desktop" ? slide.url : slide.mobileUrl;
+        return(
+          <div key={i}>
+          <Slide slide={slideImg} />
+          </div>
+        );
+      })}
       </Slider>
     )
   }
-
   render() {
+    let topSlider = this.createSlider(images[0], settings);
+    let bottomSlider = this.createSlider(images[1], bottomSliderSettings);
     return (
       <div>
-        <Slider {...settings}>
-        {images.map((slide, i) => {
-          const slideImg =
-          this.state.viewport === "desktop" ? slide.url : slide.mobileUrl;
-          return (
-            <div key={i} >
-              <Slide slide={slideImg} />
-            </div>   
-          );
-        })}
-      </Slider>
-
-      <Categories />
-
-      <Slider {...bottomSliderSetting}>
-        {images.map((slide, i) => {
-          const slideImg =
-          this.state.viewport === "desktop" ? slide.slide1Desktop : slide.shirtsMobileUrl;
-          return (
-            <div key={i} >
-              <Slide slide={slideImg} />
-            </div>   
-          );
-        })}
-      </Slider>
-
-
-      
+        {topSlider}
+      <Categories />  
+      {bottomSlider}
       </div>
-      
-
-      
     );
   }
 }

@@ -12,19 +12,22 @@ import shirts2Desktop from "../../assets/slider-imgs/desktop/Before_and_After_Tr
 import shirts1Mobile from "../../assets/slider-imgs/mobile/Before_and_After_Ash_Erie_Mobile.jpg";
 import shirts2Mobile from "../../assets/slider-imgs/mobile/Before_and_After_Traditional_Mobile.jpg";
 
-
-let images = [
-    { url: slide1Desktop,
-      mobileUrl :slide1Mob,
-     },
-    { url:slide2Desktop,
-      mobileUrl: slide2Mob 
-    },
-
-    // {slide1Desktop:shirts1Desktop,
-    //     shirtsMobileUrl: shirts1Mobile }, 
-    // {slide1Desktop: shirts2Desktop, 
-    //     shirtsMobileUrl: shirts2Mobile} 
+     let slider1 = [
+        { url : slide1Desktop,
+            mobileUrl : slide1Mob,
+           },
+          { url : slide2Desktop,
+            mobileUrl : slide2Mob 
+          },
      ]
+
+     let slider2 = [
+        { url : shirts1Desktop,
+            mobileUrl: shirts1Mobile }, 
+        {url: shirts2Desktop, 
+            mobileUrl: shirts2Mobile} 
+     ]
+
+     let images = [slider1, slider2];
 
 export default images;
