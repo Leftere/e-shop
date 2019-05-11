@@ -3,6 +3,7 @@ import Header from './components/Header/Header'
 import Promo from './components/Promo/Promo'
 import Slider from './components/Slider/Slider';
 import Categories from './components/Categories/Categories';
+
 import './Layout/Layout.css';
 
 
@@ -13,7 +14,7 @@ function App() {
     <Header /> 
     <main>
       <Slider />
-      <Categories />
+      
       <div>Slider</div>
       <div>Video</div>
       <div>Join Us</div>

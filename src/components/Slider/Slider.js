@@ -1,15 +1,13 @@
 import React from "react";
 import Slider from "react-slick";
 import Slide from "./Slide/Slide";
-
-import slide1Desktop from "../../assets/slider-imgs/desktop/spring-collection-2019-desktop.jpg";
-import slide2Desktop from "../../assets/slider-imgs/desktop/short-sleeves-2019-desktop.jpg";
-
-import slide1Mob from "../../assets/slider-imgs/mobile/spring-collection-2019-mobile.jpg";
-import slide2Mob from "../../assets/slider-imgs/mobile/short-sleeves-2019-mobile.jpg";
+import Categories from "../Categories/Categories";
+// top slider desktop Photos
+import images from './images';
 
 import "./Slider.css";
 
+console.log(images);
 const settings = {
   dots: true,
   infinite: true,
@@ -19,22 +17,35 @@ const settings = {
   slidesToScroll: 1
 };
 
+const bottomSliderSetting = {
+  dots: true,
+  infinite: true,
+  speed: 500,
+  autoplay: true,
+  fade: true,
+  slidesToShow: 1,
+  slidesToScroll: 1
+}
 class SimpleSlider extends React.Component {
     constructor(props) {
       super(props);
       let viewport = window.innerWidth > 600 ? "desktop" : "mobile";
       this.state = {
         viewport,
-        slides: [
-          {
-            url: slide1Desktop,
-            mobileUrl: slide1Mob
-          },
-          {
-            url: slide2Desktop,
-            mobileUrl: slide2Mob
-          }
-        ]
+        // slides: [
+        //   {
+        //     url: imgaes,
+        //     mobileUrl: slide1Mob,
+        //     shirtsDesktopUrl: shirts1Desktop,
+        //     shirtsMobileUrl: shirts1Mobile
+        //   },
+        //   {
+        //     url: slide2Desktop,
+        //     mobileUrl: slide2Mob,
+        //     shirtsDesktopUrl: shirts2Desktop,
+        //     shirtsMobileUrl: shirts2Mobile
+        //   }
+        // ]
       };
     }
 
@@ -54,10 +65,19 @@ class SimpleSlider extends React.Component {
     }
   }
 
+  createSlider(images, config) {
+    return (
+      <Slider {...config}>
+      {images.map()}
+      </Slider>
+    )
+  }
+
   render() {
     return (
-      <Slider {...settings}>
-        {this.state.slides.map((slide, i) => {
+      <div>
+        <Slider {...settings}>
+        {images.map((slide, i) => {
           const slideImg =
           this.state.viewport === "desktop" ? slide.url : slide.mobileUrl;
           return (
@@ -67,6 +87,27 @@ class SimpleSlider extends React.Component {
           );
         })}
       </Slider>
+
+      <Categories />
+
+      <Slider {...bottomSliderSetting}>
+        {images.map((slide, i) => {
+          const slideImg =
+          this.state.viewport === "desktop" ? slide.slide1Desktop : slide.shirtsMobileUrl;
+          return (
+            <div key={i} >
+              <Slide slide={slideImg} />
+            </div>   
+          );
+        })}
+      </Slider>
+
+
+      
+      </div>
+      
+
+      
     );
   }
 }
