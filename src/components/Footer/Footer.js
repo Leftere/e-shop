@@ -16,7 +16,7 @@ class Footer extends Component {
         return (
             <div className="Footer">
                 <h2>FEATURED IN</h2>
-                <h2>Testing</h2>
+                
                 <div className="media">
                 <img alt="sharkTankLogo" src={sharkTankLogo}/>
                 <img alt="cnnLogo" src={cnnLogo}/>
