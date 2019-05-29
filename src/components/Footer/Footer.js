@@ -25,7 +25,29 @@ class Footer extends Component {
                 <img alt="cdnbc"  src={cdnbc}/>
                 <img alt="furtuneLogo" src={furtuneLogo}/>
                 </div>
+                <div classname="footer-end">
+                <div className="website">
+                    <div>Our Fit</div>
+                    <div>Ask Us</div>
+                    <div>Terms of Service</div>
+                    <div> Privacy Policy</div>
+                    
+                </div>  
+                <div className="connect">
+                    <div>Find Your Style Quiz</div>
+                    <div>Instagram</div>
+                    <div>Facebook</div>
+                    <div>Twitter</div>
+                </div>  
+                <div className="company">
+                    <div>Press Kit</div>
+                    <div>Testimonials</div>
+                </div>  
+                <div></div>  
+                <div></div>  
+                 </div>
             </div>
+            
         )
     }
 }
